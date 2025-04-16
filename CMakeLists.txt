@@ -251,10 +251,7 @@ if(spdlog_FOUND)
   target_link_libraries(stella_vslam_ros_system PRIVATE
     spdlog::spdlog)
 endif()
-if(NOT WIN32)
-  ament_environment_hooks(
-    "${ament_cmake_package_templates_ENVIRONMENT_HOOK_LIBRARY_PATH}")
-endif()
+
 install(TARGETS
   stella_vslam_ros_system
   EXPORT export_${PROJECT_NAME}
